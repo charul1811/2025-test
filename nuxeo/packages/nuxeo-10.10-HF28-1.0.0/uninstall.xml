@@ -1,0 +1,13 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF28-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="fe351129d8df2fe69f3103e737f5ec28"/>
+  <rollback key="nxserver/lib/nuxeo-core-storage-sql-extensions" pkgId="nuxeo-10.10-HF28-1.0.0" version="10.10-HF28"/>
+  <rollback key="nxserver/bundles/nuxeo-automation-features" pkgId="nuxeo-10.10-HF28-1.0.0" version="10.10-HF28"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-gcp" pkgId="nuxeo-10.10-HF28-1.0.0" version="10.10-HF28"/>
+  <rollback key="nxserver/bundles/nuxeo-core-bulk" pkgId="nuxeo-10.10-HF28-1.0.0" version="10.10-HF28"/>
+  <rollback key="nxserver/bundles/nuxeo-core-convert-plugins" pkgId="nuxeo-10.10-HF28-1.0.0" version="10.10-HF28"/>
+  <rollback key="nxserver/bundles/nuxeo-elasticsearch-core" pkgId="nuxeo-10.10-HF28-1.0.0" version="10.10-HF28"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF28-1.0.0" version="10.10-HF28"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-spreadsheet-web" pkgId="nuxeo-10.10-HF28-1.0.0" version="10.10-HF28"/>
+  <rollback key="nxserver/bundles/nuxeo-rest-api-server" pkgId="nuxeo-10.10-HF28-1.0.0" version="10.10-HF28"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF28-1.0.0" version="10.10-HF28"/>
+</uninstall>

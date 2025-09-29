@@ -1,0 +1,6 @@
+<uninstall>
+  <config set="nuxeo.wizard.done=true"/>
+  <rollback key="nxserver/bundles/contract-management-nuxe" pkgId="nuxeo-platform-getting-started-1.3.3" version="10.10.0"/>
+  <rollback key="nxserver/bundles/getting-started-content-project" pkgId="nuxeo-platform-getting-started-1.3.3" version="1.3.3"/>
+  <rollback key="nxserver/bundles/nuxeo-showcase-content-importer" pkgId="nuxeo-platform-getting-started-1.3.3" version="10.10"/>
+</uninstall>

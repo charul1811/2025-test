@@ -1,0 +1,13 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF66-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="784482f1dad8a87255d884b239cd9d5d"/>
+  <rollback key="nxserver/lib/nuxeo-stream" pkgId="nuxeo-10.10-HF66-1.0.0" version="10.10-HF66"/>
+  <rollback key="nxserver/bundles/nuxeo-core" pkgId="nuxeo-10.10-HF66-1.0.0" version="10.10-HF66"/>
+  <rollback key="nxserver/bundles/nuxeo-core-bulk" pkgId="nuxeo-10.10-HF66-1.0.0" version="10.10-HF66"/>
+  <rollback key="nxserver/bundles/nuxeo-core-event" pkgId="nuxeo-10.10-HF66-1.0.0" version="10.10-HF66"/>
+  <rollback key="nxserver/bundles/nuxeo-core-io" pkgId="nuxeo-10.10-HF66-1.0.0" version="10.10-HF66"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-dbs" pkgId="nuxeo-10.10-HF66-1.0.0" version="10.10-HF66"/>
+  <rollback key="nxserver/bundles/nuxeo-elasticsearch-core" pkgId="nuxeo-10.10-HF66-1.0.0" version="10.10-HF66"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF66-1.0.0" version="10.10-HF66"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-content-template-manager" pkgId="nuxeo-10.10-HF66-1.0.0" version="10.10-HF66"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF66-1.0.0" version="10.10-HF66"/>
+</uninstall>

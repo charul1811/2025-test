@@ -1,0 +1,14 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF31-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="45186f8971af34e1128cfa3894731731"/>
+  <rollback key="nxserver/bundles/nuxeo-core-api" pkgId="nuxeo-10.10-HF31-1.0.0" version="10.10-HF31"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-s3" pkgId="nuxeo-10.10-HF31-1.0.0" version="10.10-HF31"/>
+  <rollback key="nxserver/bundles/nuxeo-core-bulk" pkgId="nuxeo-10.10-HF31-1.0.0" version="10.10-HF31"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-dbs" pkgId="nuxeo-10.10-HF31-1.0.0" version="10.10-HF31"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-marklogic" pkgId="nuxeo-10.10-HF31-1.0.0" version="10.10-HF31"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-sql" pkgId="nuxeo-10.10-HF31-1.0.0" version="10.10-HF31"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF31-1.0.0" version="10.10-HF31"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-filemanager-core-listener" pkgId="nuxeo-10.10-HF31-1.0.0" version="10.10-HF31"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-login-saml2" pkgId="nuxeo-10.10-HF31-1.0.0" version="10.10-HF31"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-oauth" pkgId="nuxeo-10.10-HF31-1.0.0" version="10.10-HF31"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF31-1.0.0" version="10.10-HF31"/>
+</uninstall>

@@ -1,0 +1,16 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF51-1.0.0/backup/a8500aa3626cf778fe6ba4603d6b2e34_nuxeo-wizard.war" tofile="${env.server.home}/templates/nuxeo-wizard.war" overwrite="true" md5="907878e75975e9cdebb5c95105e96bdb"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF51-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="8d34e92fb11f332d8989be4552440031"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF51-1.0.0/backup/a0e867d2bfd4f92b7d73143f07490021_nuxeo-launcher.jar" tofile="${env.server.home}/bin/nuxeo-launcher.jar" overwrite="true" md5="85c7138cbd0b1c0984137b70a3b8a3bf"/>
+  <rollback key="nxserver/bundles/nuxeo-common" pkgId="nuxeo-10.10-HF51-1.0.0" version="10.10-HF51"/>
+  <rollback key="nxserver/bundles/nuxeo-core" pkgId="nuxeo-10.10-HF51-1.0.0" version="10.10-HF51"/>
+  <rollback key="nxserver/bundles/nuxeo-core-api" pkgId="nuxeo-10.10-HF51-1.0.0" version="10.10-HF51"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-dbs" pkgId="nuxeo-10.10-HF51-1.0.0" version="10.10-HF51"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-sql" pkgId="nuxeo-10.10-HF51-1.0.0" version="10.10-HF51"/>
+  <rollback key="nxserver/bundles/nuxeo-easyshare-core" pkgId="nuxeo-10.10-HF51-1.0.0" version="10.10-HF51"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF51-1.0.0" version="10.10-HF51"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-imaging-core" pkgId="nuxeo-10.10-HF51-1.0.0" version="10.10-HF51"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-spreadsheet-web" pkgId="nuxeo-10.10-HF51-1.0.0" version="10.10-HF51"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF51-1.0.0" version="10.10-HF51"/>
+  <rollback key="nxserver/bundles/nuxeo-wopi" pkgId="nuxeo-10.10-HF51-1.0.0" version="10.10-HF51"/>
+</uninstall>

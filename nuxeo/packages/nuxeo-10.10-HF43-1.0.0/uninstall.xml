@@ -1,0 +1,18 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF43-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="33551a50f4eb278573abeddf4d3a9f73"/>
+  <rollback key="nxserver/bundles/nuxeo-core-api" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+  <rollback key="nxserver/bundles/nuxeo-core-bulk" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+  <rollback key="nxserver/bundles/nuxeo-core-management" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+  <rollback key="nxserver/bundles/nuxeo-core-mimetype" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+  <rollback key="nxserver/bundles/nuxeo-core-redis" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-commandline-executor" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-filemanager-core-listener" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-login-saml2" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-query-api" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-spreadsheet-web" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+  <rollback key="nxserver/bundles/nuxeo-preview-core" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+  <rollback key="nxserver/bundles/nuxeo-retention-web-ui" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+  <rollback key="nxserver/bundles/nuxeo-routing-core" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF43-1.0.0" version="10.10-HF43"/>
+</uninstall>

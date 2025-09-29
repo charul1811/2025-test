@@ -1,0 +1,256 @@
+2025-09-29T08:02:12,290 INFO  [main] [org.nuxeo.osgi.application.loader.FrameworkLoader] 
+======================================================================
+= Starting Nuxeo Framework
+======================================================================
+  * Distribution Version = 10.10
+  * Distribution Date = 201901211253
+  * Server home = /opt/nuxeo/server
+  * Runtime home = /opt/nuxeo/server/nxserver
+  * Data Directory = /var/lib/nuxeo/data
+  * Log Directory = /var/log/nuxeo
+  * Configuration Directory = /opt/nuxeo/server/nxserver/config
+  * Temp Directory = /opt/nuxeo/server/tmp
+======================================================================
+2025-09-29T08:02:18,761 WARN  [main] [org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent] Command not available: videoClosedCaptionsExtractor (command ccextractor not found in system path (descriptor CommandLineDescriptor[name=videoClosedCaptionsExtractor,enabled=true,available=false,command=ccextractor,parameterString=#{sourceFilePath} -out=#{outFormat} -trim -o #{outFilePath},testParameterString=,winParameterString=<null>,winTestParameterString=,winCommand=<null>,tester=<null>,readOutput=true,installationDirective=You need to install ccextractor.,installErrorMessage=<null>,timeout=<null>]). You need to install ccextractor.)
+2025-09-29T08:02:18,765 WARN  [main] [org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent] Command not available: videoPartClosedCaptionsExtractor (command ccextractor not found in system path (descriptor CommandLineDescriptor[name=videoPartClosedCaptionsExtractor,enabled=true,available=false,command=ccextractor,parameterString=#{sourceFilePath} -out=#{outFormat} -startat #{startAt} -endat #{endAt} -trim -o #{outFilePath},testParameterString=,winParameterString=<null>,winTestParameterString=,winCommand=<null>,tester=<null>,readOutput=true,installationDirective=You need to install ccextractor.,installErrorMessage=<null>,timeout=<null>]). You need to install ccextractor.)
+2025-09-29T08:02:22,250 WARN  [main] [org.nuxeo.elasticsearch.core.ElasticSearchEmbeddedNode] Elasticsearch embedded configuration is ONLY for testing purpose. You need to create a dedicated Elasticsearch cluster for production.
+2025-09-29T08:02:26,514 INFO  [main] [org.nuxeo.runtime.osgi.OSGiRuntimeService] Nuxeo Platform Started
+======================================================================
+= Component Loading Status: Pending: 0 / Missing: 0 / Unstarted: 0 / Total: 571
+======================================================================
+2025-09-29T08:03:56,658 WARN  [http-nio-0.0.0.0-8080-exec-8] [org.nuxeo.connect.update.standalone.PackagePersistence] Ignoring file '2025-charul.thacker.auditeur@lecnam.net.zip' in package store
+2025-09-29T08:57:18,377 ERROR [Nuxeo-Work-updateACEStatus-1:2006665265904.20534299] [org.nuxeo.ecm.core.work.AbstractWork] Exception during work: UpdateACEStatusWork(, Progress(?%, ?/0), Updating ACE status)
+org.nuxeo.runtime.transaction.TransactionRuntimeException: Transaction has timed out: Tx started: 1759135555597, timeout: 1759135855597 (duration 300s), current: 1759136238376
+	at org.nuxeo.runtime.transaction.TransactionHelper.checkTransactionTimeout(TransactionHelper.java:273) ~[nuxeo-runtime-jtajca-10.10-HF63.jar:?]
+	at org.nuxeo.ecm.core.api.local.LocalSession.getSession(LocalSession.java:108) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1287) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1272) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.security.UpdateACEStatusWork.work(UpdateACEStatusWork.java:77) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.runWorkWithTransaction(AbstractWork.java:493) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.run(AbstractWork.java:383) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.WorkHolder.run(WorkHolder.java:57) [nuxeo-core-event-10.10-HF73.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_302]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_302]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_302]
+2025-09-29T08:57:18,374 ERROR [Quartz_Worker-1] [org.nuxeo.ecm.core.event.impl.EventServiceImpl] Exception during triggerEsclationRules sync listener execution (after 3ms),  because of transaction timeout
+org.nuxeo.runtime.transaction.TransactionRuntimeException: Transaction has timed out: Tx started: 1759135555597, timeout: 1759135855597 (duration 300s), current: 1759136238370
+	at org.nuxeo.runtime.transaction.TransactionHelper.checkTransactionTimeout(TransactionHelper.java:273) ~[nuxeo-runtime-jtajca-10.10-HF63.jar:?]
+	at org.nuxeo.ecm.core.api.local.LocalSession.getSession(LocalSession.java:108) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1287) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1272) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.impl.DocumentRoutingEscalationServiceImpl$1.run(DocumentRoutingEscalationServiceImpl.java:57) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.core.api.UnrestrictedSessionRunner.runUnrestricted(UnrestrictedSessionRunner.java:119) ~[nuxeo-core-api-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.impl.DocumentRoutingEscalationServiceImpl.queryForSuspendedNodesWithEscalation(DocumentRoutingEscalationServiceImpl.java:64) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.listener.DocumentRoutingEscalationListener$1.run(DocumentRoutingEscalationListener.java:61) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.core.api.UnrestrictedSessionRunner.runUnrestricted(UnrestrictedSessionRunner.java:137) ~[nuxeo-core-api-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.listener.DocumentRoutingEscalationListener.triggerEsclationRulesExecution(DocumentRoutingEscalationListener.java:71) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.listener.DocumentRoutingEscalationListener.handleEvent(DocumentRoutingEscalationListener.java:51) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.core.event.impl.EventServiceImpl.fireEvent(EventServiceImpl.java:243) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.scheduler.EventJob.execute(EventJob.java:119) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.scheduler.EventJob.execute(EventJob.java:65) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) [quartz-2.3.2.jar:?]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) [quartz-2.3.2.jar:?]
+2025-09-29T08:57:18,430 ERROR [Nuxeo-Work-updateACEStatus-1:2006665265904.20534299] [org.nuxeo.ecm.core.work.AbstractWork] Exception during work: UpdateACEStatusWork(, Progress(?%, ?/0), Updating ACE status)
+org.nuxeo.runtime.transaction.TransactionRuntimeException: Transaction has timed out: Tx started: 1759135555597, timeout: 1759135855597 (duration 300s), current: 1759136238430
+	at org.nuxeo.runtime.transaction.TransactionHelper.checkTransactionTimeout(TransactionHelper.java:273) ~[nuxeo-runtime-jtajca-10.10-HF63.jar:?]
+	at org.nuxeo.ecm.core.api.local.LocalSession.getSession(LocalSession.java:108) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1287) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1272) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.security.UpdateACEStatusWork.work(UpdateACEStatusWork.java:77) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.runWorkWithTransaction(AbstractWork.java:493) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.run(AbstractWork.java:383) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.WorkHolder.run(WorkHolder.java:57) [nuxeo-core-event-10.10-HF73.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_302]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_302]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_302]
+2025-09-29T08:57:18,432 ERROR [Quartz_Worker-1] [org.quartz.core.JobRunShell] Job nuxeo.escalationScheduler threw an unhandled Exception: 
+org.nuxeo.runtime.transaction.TransactionRuntimeException: Transaction has timed out: Tx started: 1759135555597, timeout: 1759135855597 (duration 300s), current: 1759136238370
+	at org.nuxeo.runtime.transaction.TransactionHelper.checkTransactionTimeout(TransactionHelper.java:273) ~[nuxeo-runtime-jtajca-10.10-HF63.jar:?]
+	at org.nuxeo.ecm.core.api.local.LocalSession.getSession(LocalSession.java:108) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1287) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1272) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.impl.DocumentRoutingEscalationServiceImpl$1.run(DocumentRoutingEscalationServiceImpl.java:57) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.core.api.UnrestrictedSessionRunner.runUnrestricted(UnrestrictedSessionRunner.java:119) ~[nuxeo-core-api-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.impl.DocumentRoutingEscalationServiceImpl.queryForSuspendedNodesWithEscalation(DocumentRoutingEscalationServiceImpl.java:64) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.listener.DocumentRoutingEscalationListener$1.run(DocumentRoutingEscalationListener.java:61) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.core.api.UnrestrictedSessionRunner.runUnrestricted(UnrestrictedSessionRunner.java:137) ~[nuxeo-core-api-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.listener.DocumentRoutingEscalationListener.triggerEsclationRulesExecution(DocumentRoutingEscalationListener.java:71) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.listener.DocumentRoutingEscalationListener.handleEvent(DocumentRoutingEscalationListener.java:51) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.core.event.impl.EventServiceImpl.fireEvent(EventServiceImpl.java:243) ~[nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.scheduler.EventJob.execute(EventJob.java:119) ~[nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.scheduler.EventJob.execute(EventJob.java:65) ~[nuxeo-core-event-10.10-HF73.jar:?]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) [quartz-2.3.2.jar:?]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) [quartz-2.3.2.jar:?]
+2025-09-29T08:57:18,433 ERROR [Nuxeo-Work-updateACEStatus-1:2006665265904.20534299] [org.nuxeo.ecm.core.work.AbstractWork] Exception during work: UpdateACEStatusWork(, Progress(?%, ?/0), Updating ACE status)
+org.nuxeo.runtime.transaction.TransactionRuntimeException: Transaction has timed out: Tx started: 1759135555597, timeout: 1759135855597 (duration 300s), current: 1759136238433
+	at org.nuxeo.runtime.transaction.TransactionHelper.checkTransactionTimeout(TransactionHelper.java:273) ~[nuxeo-runtime-jtajca-10.10-HF63.jar:?]
+	at org.nuxeo.ecm.core.api.local.LocalSession.getSession(LocalSession.java:108) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1287) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1272) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.security.UpdateACEStatusWork.work(UpdateACEStatusWork.java:77) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.runWorkWithTransaction(AbstractWork.java:493) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.run(AbstractWork.java:383) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.WorkHolder.run(WorkHolder.java:57) [nuxeo-core-event-10.10-HF73.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_302]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_302]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_302]
+2025-09-29T08:57:18,434 ERROR [Quartz_Worker-1] [org.quartz.core.ErrorLogger] Job (nuxeo.escalationScheduler threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213) [quartz-2.3.2.jar:?]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) [quartz-2.3.2.jar:?]
+Caused by: org.nuxeo.runtime.transaction.TransactionRuntimeException: Transaction has timed out: Tx started: 1759135555597, timeout: 1759135855597 (duration 300s), current: 1759136238370
+	at org.nuxeo.runtime.transaction.TransactionHelper.checkTransactionTimeout(TransactionHelper.java:273) ~[nuxeo-runtime-jtajca-10.10-HF63.jar:?]
+	at org.nuxeo.ecm.core.api.local.LocalSession.getSession(LocalSession.java:108) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1287) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1272) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.impl.DocumentRoutingEscalationServiceImpl$1.run(DocumentRoutingEscalationServiceImpl.java:57) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.core.api.UnrestrictedSessionRunner.runUnrestricted(UnrestrictedSessionRunner.java:119) ~[nuxeo-core-api-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.impl.DocumentRoutingEscalationServiceImpl.queryForSuspendedNodesWithEscalation(DocumentRoutingEscalationServiceImpl.java:64) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.listener.DocumentRoutingEscalationListener$1.run(DocumentRoutingEscalationListener.java:61) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.core.api.UnrestrictedSessionRunner.runUnrestricted(UnrestrictedSessionRunner.java:137) ~[nuxeo-core-api-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.listener.DocumentRoutingEscalationListener.triggerEsclationRulesExecution(DocumentRoutingEscalationListener.java:71) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.platform.routing.core.listener.DocumentRoutingEscalationListener.handleEvent(DocumentRoutingEscalationListener.java:51) ~[nuxeo-routing-core-10.10-HF72.jar:?]
+	at org.nuxeo.ecm.core.event.impl.EventServiceImpl.fireEvent(EventServiceImpl.java:243) ~[nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.scheduler.EventJob.execute(EventJob.java:119) ~[nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.scheduler.EventJob.execute(EventJob.java:65) ~[nuxeo-core-event-10.10-HF73.jar:?]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.3.2.jar:?]
+	... 1 more
+2025-09-29T08:57:18,437 ERROR [Nuxeo-Work-updateACEStatus-1:2006665265904.20534299] [org.nuxeo.ecm.core.work.AbstractWork] Exception during work: UpdateACEStatusWork(, Progress(?%, ?/0), Updating ACE status)
+org.nuxeo.runtime.transaction.TransactionRuntimeException: Transaction has timed out: Tx started: 1759135555597, timeout: 1759135855597 (duration 300s), current: 1759136238436
+	at org.nuxeo.runtime.transaction.TransactionHelper.checkTransactionTimeout(TransactionHelper.java:273) ~[nuxeo-runtime-jtajca-10.10-HF63.jar:?]
+	at org.nuxeo.ecm.core.api.local.LocalSession.getSession(LocalSession.java:108) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1287) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1272) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.security.UpdateACEStatusWork.work(UpdateACEStatusWork.java:77) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.runWorkWithTransaction(AbstractWork.java:493) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.run(AbstractWork.java:383) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.WorkHolder.run(WorkHolder.java:57) [nuxeo-core-event-10.10-HF73.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_302]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_302]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_302]
+2025-09-29T08:57:18,440 ERROR [Nuxeo-Work-updateACEStatus-1:2006665265904.20534299] [org.nuxeo.ecm.core.work.AbstractWork] Exception during work: UpdateACEStatusWork(, Progress(?%, ?/0), Updating ACE status)
+org.nuxeo.runtime.transaction.TransactionRuntimeException: Transaction has timed out: Tx started: 1759135555597, timeout: 1759135855597 (duration 300s), current: 1759136238440
+	at org.nuxeo.runtime.transaction.TransactionHelper.checkTransactionTimeout(TransactionHelper.java:273) ~[nuxeo-runtime-jtajca-10.10-HF63.jar:?]
+	at org.nuxeo.ecm.core.api.local.LocalSession.getSession(LocalSession.java:108) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1287) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1272) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.security.UpdateACEStatusWork.work(UpdateACEStatusWork.java:77) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.runWorkWithTransaction(AbstractWork.java:493) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.run(AbstractWork.java:383) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.WorkHolder.run(WorkHolder.java:57) [nuxeo-core-event-10.10-HF73.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_302]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_302]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_302]
+2025-09-29T08:57:18,444 ERROR [Nuxeo-Work-updateACEStatus-1:2006665265904.20534299] [org.nuxeo.ecm.core.work.AbstractWork] Exception during work: UpdateACEStatusWork(, Progress(?%, ?/0), Updating ACE status)
+org.nuxeo.runtime.transaction.TransactionRuntimeException: Transaction has timed out: Tx started: 1759135555597, timeout: 1759135855597 (duration 300s), current: 1759136238444
+	at org.nuxeo.runtime.transaction.TransactionHelper.checkTransactionTimeout(TransactionHelper.java:273) ~[nuxeo-runtime-jtajca-10.10-HF63.jar:?]
+	at org.nuxeo.ecm.core.api.local.LocalSession.getSession(LocalSession.java:108) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1287) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1272) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.security.UpdateACEStatusWork.work(UpdateACEStatusWork.java:77) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.runWorkWithTransaction(AbstractWork.java:493) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.run(AbstractWork.java:383) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.WorkHolder.run(WorkHolder.java:57) [nuxeo-core-event-10.10-HF73.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_302]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_302]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_302]
+2025-09-29T08:57:18,451 ERROR [Nuxeo-Work-updateACEStatus-1:2006665265904.20534299] [org.nuxeo.ecm.core.work.AbstractWork] Exception during work: UpdateACEStatusWork(, Progress(?%, ?/0), Updating ACE status)
+org.nuxeo.runtime.transaction.TransactionRuntimeException: Transaction has timed out: Tx started: 1759135555597, timeout: 1759135855597 (duration 300s), current: 1759136238450
+	at org.nuxeo.runtime.transaction.TransactionHelper.checkTransactionTimeout(TransactionHelper.java:273) ~[nuxeo-runtime-jtajca-10.10-HF63.jar:?]
+	at org.nuxeo.ecm.core.api.local.LocalSession.getSession(LocalSession.java:108) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1287) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1272) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.security.UpdateACEStatusWork.work(UpdateACEStatusWork.java:77) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.runWorkWithTransaction(AbstractWork.java:493) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.run(AbstractWork.java:383) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.WorkHolder.run(WorkHolder.java:57) [nuxeo-core-event-10.10-HF73.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_302]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_302]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_302]
+2025-09-29T08:57:18,463 ERROR [Nuxeo-Work-updateACEStatus-1:2006665265904.20534299] [org.nuxeo.ecm.core.work.AbstractWork] Exception during work: UpdateACEStatusWork(, Progress(?%, ?/0), Updating ACE status)
+org.nuxeo.runtime.transaction.TransactionRuntimeException: Transaction has timed out: Tx started: 1759135555597, timeout: 1759135855597 (duration 300s), current: 1759136238462
+	at org.nuxeo.runtime.transaction.TransactionHelper.checkTransactionTimeout(TransactionHelper.java:273) ~[nuxeo-runtime-jtajca-10.10-HF63.jar:?]
+	at org.nuxeo.ecm.core.api.local.LocalSession.getSession(LocalSession.java:108) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1287) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.api.AbstractSession.queryAndFetch(AbstractSession.java:1272) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.security.UpdateACEStatusWork.work(UpdateACEStatusWork.java:77) ~[nuxeo-core-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.runWorkWithTransaction(AbstractWork.java:493) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.run(AbstractWork.java:383) [nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.WorkHolder.run(WorkHolder.java:57) [nuxeo-core-event-10.10-HF73.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_302]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_302]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_302]
+2025-09-29T08:57:18,639 ERROR [Nuxeo-Work-transientStorageGC-1] [org.nuxeo.ecm.core.work.WorkManagerImpl] Uncaught error on thread: Nuxeo-Work-transientStorageGC-1, current work might be lost, WorkManager metrics might be corrupted.
+org.nuxeo.ecm.core.api.NuxeoException: Work failed after 0 retries, class=class org.nuxeo.ecm.core.transientstore.TransiantStorageGCWork id=download category=transientStorageGC title=Transient Store GC on download
+	at org.nuxeo.ecm.core.work.AbstractWork.workFailed(AbstractWork.java:439) ~[nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.run(AbstractWork.java:395) ~[nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.WorkHolder.run(WorkHolder.java:57) ~[nuxeo-core-event-10.10-HF73.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[?:1.8.0_302]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[?:1.8.0_302]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_302]
+Caused by: org.nuxeo.runtime.transaction.TransactionRuntimeException: Unable to commit: Transaction timeout, started: 1759135555597 timeout: 300000ms
+	at org.nuxeo.runtime.transaction.TransactionHelper.commitOrRollbackTransaction(TransactionHelper.java:445) ~[nuxeo-runtime-jtajca-10.10-HF63.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.runWorkWithTransaction(AbstractWork.java:522) ~[nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.run(AbstractWork.java:383) ~[nuxeo-core-event-10.10-HF73.jar:?]
+	... 4 more
+Caused by: javax.transaction.RollbackException: Unable to commit: Transaction timeout, started: 1759135555597 timeout: 300000ms
+	at org.apache.geronimo.transaction.manager.TransactionImpl.commit(TransactionImpl.java:289) ~[geronimo-transaction-2.2.1-NX2.jar:2.2.1-NX2]
+	at org.apache.geronimo.transaction.manager.TransactionManagerImpl.commit(TransactionManagerImpl.java:252) ~[geronimo-transaction-2.2.1-NX2.jar:2.2.1-NX2]
+	at org.nuxeo.runtime.jtajca.NuxeoContainer$UserTransactionImpl.commit(NuxeoContainer.java:538) ~[nuxeo-runtime-jtajca-10.10-HF63.jar:?]
+	at org.nuxeo.runtime.transaction.TransactionHelper.commitOrRollbackTransaction(TransactionHelper.java:429) ~[nuxeo-runtime-jtajca-10.10-HF63.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.runWorkWithTransaction(AbstractWork.java:522) ~[nuxeo-core-event-10.10-HF73.jar:?]
+	at org.nuxeo.ecm.core.work.AbstractWork.run(AbstractWork.java:383) ~[nuxeo-core-event-10.10-HF73.jar:?]
+	... 4 more
+2025-09-29T11:34:33,289 WARN  [http-nio-0.0.0.0-8080-exec-2] [org.nuxeo.connect.update.standalone.PackagePersistence] Ignoring file '2025-charul.thacker.auditeur@lecnam.net.zip' in package store
+2025-09-29T11:36:34,485 WARN  [http-nio-0.0.0.0-8080-exec-1] [org.nuxeo.connect.update.standalone.PackagePersistence] Ignoring file '2025-charul.thacker.auditeur@lecnam.net.zip' in package store
+2025-09-29T12:21:13,722 INFO  [main] [org.nuxeo.osgi.application.loader.FrameworkLoader] 
+======================================================================
+= Starting Nuxeo Framework
+======================================================================
+  * Distribution Version = 10.10
+  * Distribution Date = 201901211253
+  * Server home = /opt/nuxeo/server
+  * Runtime home = /opt/nuxeo/server/nxserver
+  * Data Directory = /var/lib/nuxeo/data
+  * Log Directory = /var/log/nuxeo
+  * Configuration Directory = /opt/nuxeo/server/nxserver/config
+  * Temp Directory = /opt/nuxeo/server/tmp
+======================================================================
+2025-09-29T12:21:18,638 WARN  [main] [org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent] Command not available: videoClosedCaptionsExtractor (command ccextractor not found in system path (descriptor CommandLineDescriptor[name=videoClosedCaptionsExtractor,enabled=true,available=false,command=ccextractor,parameterString=#{sourceFilePath} -out=#{outFormat} -trim -o #{outFilePath},testParameterString=,winParameterString=<null>,winTestParameterString=,winCommand=<null>,tester=<null>,readOutput=true,installationDirective=You need to install ccextractor.,installErrorMessage=<null>,timeout=<null>]). You need to install ccextractor.)
+2025-09-29T12:21:18,643 WARN  [main] [org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent] Command not available: videoPartClosedCaptionsExtractor (command ccextractor not found in system path (descriptor CommandLineDescriptor[name=videoPartClosedCaptionsExtractor,enabled=true,available=false,command=ccextractor,parameterString=#{sourceFilePath} -out=#{outFormat} -startat #{startAt} -endat #{endAt} -trim -o #{outFilePath},testParameterString=,winParameterString=<null>,winTestParameterString=,winCommand=<null>,tester=<null>,readOutput=true,installationDirective=You need to install ccextractor.,installErrorMessage=<null>,timeout=<null>]). You need to install ccextractor.)
+2025-09-29T12:21:25,280 WARN  [main] [org.nuxeo.elasticsearch.core.ElasticSearchEmbeddedNode] Elasticsearch embedded configuration is ONLY for testing purpose. You need to create a dedicated Elasticsearch cluster for production.
+2025-09-29T12:21:30,635 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Summer in the USA with id=2f33e13b-70e1-446c-a053-128bddc77af1 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-29T12:21:30,636 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Summer in the USA with id=2f33e13b-70e1-446c-a053-128bddc77af1 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-29T12:21:30,644 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document To the Moon and back with id=b0f3da9a-9b84-4b19-b7af-ccef24203c73 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-29T12:21:30,646 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document To the Moon and back with id=b0f3da9a-9b84-4b19-b7af-ccef24203c73 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-29T12:21:30,651 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Winter in the USA with id=12f574b8-39ff-4bfd-9e3f-b40da61423f4 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-29T12:21:30,653 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Winter in the USA with id=12f574b8-39ff-4bfd-9e3f-b40da61423f4 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-29T12:21:30,684 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document 2015 Annual Conference with id=d13018b2-0467-4d74-9536-cfa7c529b717 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-29T12:21:30,686 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document 2015 Annual Conference with id=d13018b2-0467-4d74-9536-cfa7c529b717 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-29T12:21:30,692 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document 2016 Annual Conference with id=baf61ced-78e5-42d0-bef1-e6197b3e7ba2 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-29T12:21:30,694 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document 2016 Annual Conference with id=baf61ced-78e5-42d0-bef1-e6197b3e7ba2 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-29T12:21:30,700 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Geller-Bing Wedding with id=3605528e-1bd6-42ff-8f45-96be7ec91fd9 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-29T12:21:30,701 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Geller-Bing Wedding with id=3605528e-1bd6-42ff-8f45-96be7ec91fd9 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-29T12:21:30,790 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Auto Loan Con with id=50b4f04a-a028-43c8-b7b8-5e3b12b46cbc and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-29T12:21:30,792 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Auto Loan Con with id=50b4f04a-a028-43c8-b7b8-5e3b12b46cbc and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-29T12:21:30,798 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Credit Card C with id=5ead2937-878d-4e7d-bcf9-ddc0989e3e1f and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-29T12:21:30,799 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Credit Card C with id=5ead2937-878d-4e7d-bcf9-ddc0989e3e1f and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-29T12:21:30,805 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Mortgage Cont with id=2833aae9-4153-4d89-abb8-d3608decbf99 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-29T12:21:30,806 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Mortgage Cont with id=2833aae9-4153-4d89-abb8-d3608decbf99 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-29T12:21:30,812 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Student Loan with id=a2e62823-c6c8-4eb3-9500-0b2ef392f9b7 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-29T12:21:30,813 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Student Loan with id=a2e62823-c6c8-4eb3-9500-0b2ef392f9b7 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-29T12:21:30,846 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Beyond Space - Website S with id=ce72e75e-9a67-4cd3-bdd5-dfb9a499735c and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-29T12:21:30,847 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Beyond Space - Website S with id=ce72e75e-9a67-4cd3-bdd5-dfb9a499735c and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-29T12:21:30,852 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Beyond Space - Website c with id=51b4733f-fe56-4137-89da-92307043c73e and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-29T12:21:30,854 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Beyond Space - Website c with id=51b4733f-fe56-4137-89da-92307043c73e and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-29T12:21:30,886 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Empty Venue Location with id=a884e3b6-1a5b-401a-b0c0-fca20ae5c74a and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-29T12:21:30,888 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Empty Venue Location with id=a884e3b6-1a5b-401a-b0c0-fca20ae5c74a and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-29T12:21:30,910 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Venue, Equipment and Per with id=e8bf192a-1e30-4fe1-929e-e23894f43911 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-29T12:21:30,915 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Venue, Equipment and Per with id=e8bf192a-1e30-4fe1-929e-e23894f43911 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-29T12:21:31,604 INFO  [main] [org.nuxeo.runtime.osgi.OSGiRuntimeService] Nuxeo Platform Started
+======================================================================
+= Component Loading Status: Pending: 0 / Missing: 0 / Unstarted: 0 / Total: 571
+======================================================================
+2025-09-29T12:22:50,467 WARN  [http-nio-0.0.0.0-8080-exec-2] [org.nuxeo.connect.update.standalone.PackagePersistence] Ignoring file '2025-charul.thacker.auditeur@lecnam.net.zip' in package store
+2025-09-29T12:22:51,744 WARN  [elasticsearch[nuxeoNode][scheduler][T#1]] [org.elasticsearch.monitor.jvm.JvmGcMonitorService] [gc][78] overhead, spent [689ms] collecting in the last [1.2s]
+2025-09-29T12:38:30,582 WARN  [http-nio-0.0.0.0-8080-exec-2] [org.nuxeo.connect.update.standalone.PackagePersistence] Ignoring file '2025-charul.thacker.auditeur@lecnam.net.zip' in package store

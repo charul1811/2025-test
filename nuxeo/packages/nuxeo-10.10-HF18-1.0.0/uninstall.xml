@@ -1,0 +1,14 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF18-1.0.0/backup/d54f9ea50ca418ca6e62b2200ab24a52_kafka-config.xml.nxftl" tofile="${env.server.home}/templates/common-base/nxserver/config/kafka-config.xml.nxftl" overwrite="true" md5="2c7a8876e5aa56da8eaf860e7f6c835b"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF18-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="70f51ce32619c68a8d5df2d4e793c399"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF18-1.0.0/backup/a0e867d2bfd4f92b7d73143f07490021_nuxeo-launcher.jar" tofile="${env.server.home}/bin/nuxeo-launcher.jar" overwrite="true" md5="97084d8d764a5fff82bb136806fc523c"/>
+  <rollback key="nxserver/bundles/nuxeo-core-api" pkgId="nuxeo-10.10-HF18-1.0.0" version="10.10-HF18"/>
+  <rollback key="nxserver/bundles/nuxeo-core-event" pkgId="nuxeo-10.10-HF18-1.0.0" version="10.10-HF18"/>
+  <rollback key="nxserver/bundles/nuxeo-core-io" pkgId="nuxeo-10.10-HF18-1.0.0" version="10.10-HF18"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-mongodb" pkgId="nuxeo-10.10-HF18-1.0.0" version="10.10-HF18"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF18-1.0.0" version="10.10-HF18"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-video-core" pkgId="nuxeo-10.10-HF18-1.0.0" version="10.10-HF18"/>
+  <rollback key="nxserver/bundles/nuxeo-template-rendering-core" pkgId="nuxeo-10.10-HF18-1.0.0" version="10.10-HF18"/>
+  <rollback key="nxserver/bundles/nuxeo-thumbnail" pkgId="nuxeo-10.10-HF18-1.0.0" version="10.10-HF18"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF18-1.0.0" version="10.10-HF18"/>
+</uninstall>

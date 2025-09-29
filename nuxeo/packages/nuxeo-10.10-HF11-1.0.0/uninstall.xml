@@ -1,0 +1,25 @@
+<uninstall>
+  <rollback key="nxserver/bundles/nuxeo-connect-client" pkgId="nuxeo-10.10-HF11-1.0.0" version="1.7.7"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF11-1.0.0/backup/9f415cf364a9bbd49df4262f99834d0b_blacklist.nxftl" tofile="${env.server.home}/templates/common/config/blacklist.nxftl" overwrite="true" md5="333f979d860e542f749c3ebdd194b9d4"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF11-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="d3c37e22380a277b63cce9932f1f81ea"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF11-1.0.0/backup/a0e867d2bfd4f92b7d73143f07490021_nuxeo-launcher.jar" tofile="${env.server.home}/bin/nuxeo-launcher.jar" overwrite="true" md5="8c76be508f9be4c653d51e6662d639fa"/>
+  <rollback key="nxserver/bundles/nuxeo-admin-center-core" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-automation-core" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-core" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-core-api" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-core-bulk" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-core-persistence" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-core-query" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-core-schema" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-sql" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-elasticsearch-core" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-query-api" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-relations-core" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-rendition-core" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-spreadsheet-web" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-task-core" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-runtime-jtajca" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-runtime-reload" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF11-1.0.0" version="10.10-HF11"/>
+</uninstall>

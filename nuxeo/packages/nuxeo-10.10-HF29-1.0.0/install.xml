@@ -1,0 +1,13 @@
+<install>
+  <update upgradeOnly="true" file="${package.root}/install/bundlesupdate/nxserver/bundles" todir="${env.server.home}/nxserver/bundles" />
+  <copy overwrite="true" file="${package.root}/install/bin/nuxeo-launcher-10.10-HF29-jar-with-dependencies.jar" tofile="${env.server.home}/bin/nuxeo-launcher.jar" />
+  <copy overwrite="true" file="${package.root}/templates" todir="${env.server.home}" />
+  <update file="${package.root}/install/tomcatupdate/bin" todir="${env.server.home}/bin" />
+  <update file="${package.root}/install/tomcatupdate/lib" todir="${env.server.home}/lib" />
+  <delete file="${env.server.home}/nxserver/lib/tomcat-juli-9.0.35.jar" />
+  <delete file="${env.server.home}/nxserver/lib/tomcat-jdbc-9.0.35.jar" />
+  <update file="${package.root}/install/libsadd/nxserver/lib" todir="${env.server.home}/nxserver/lib" />
+  <update upgradeOnly="true" file="${package.root}/install/libsupdate/nxserver/lib" todir="${env.server.home}/nxserver/lib" />
+  <update upgradeOnly="true" file="${package.root}/install/libsupdate/lib" todir="${env.server.home}/lib" />
+  <delete file="${env.server.home}/nxserver/lib/woodstox-core-asl-4.2.0.jar" />
+</install>

@@ -1,0 +1,16 @@
+<uninstall>
+  <rollback key="nxserver/lib/xstream" pkgId="nuxeo-10.10-HF13-1.0.0" version="1.4.11"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF13-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="22e26960d626d95c6a4a86fe0cae6bc1"/>
+  <rollback key="nxserver/bundles nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF13-1.0.0" version="10.10-HF13"/>
+  <rollback key="nxserver/bundles/nuxeo-core-schema" pkgId="nuxeo-10.10-HF13-1.0.0" version="10.10-HF13"/>
+  <rollback key="nxserver/bundles/nuxeo-elasticsearch-core" pkgId="nuxeo-10.10-HF13-1.0.0" version="10.10-HF13"/>
+  <rollback key="nxserver/bundles/nuxeo-permissions" pkgId="nuxeo-10.10-HF13-1.0.0" version="10.10-HF13"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF13-1.0.0" version="10.10-HF13"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-comment" pkgId="nuxeo-10.10-HF13-1.0.0" version="10.10-HF13"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-directory-mongodb" pkgId="nuxeo-10.10-HF13-1.0.0" version="10.10-HF13"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-spreadsheet-web-ui" pkgId="nuxeo-10.10-HF13-1.0.0" version="10.10-HF13"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-usermanager-api" pkgId="nuxeo-10.10-HF13-1.0.0" version="10.10-HF13"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-usermanager-core" pkgId="nuxeo-10.10-HF13-1.0.0" version="10.10-HF13"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-web-common" pkgId="nuxeo-10.10-HF13-1.0.0" version="10.10-HF13"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF13-1.0.0" version="10.10-HF13"/>
+</uninstall>

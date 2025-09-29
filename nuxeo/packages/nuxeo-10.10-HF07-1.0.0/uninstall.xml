@@ -1,0 +1,10 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF07-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="e5c46bc688f4dde5a49c6f76ea1e95da"/>
+  <rollback key="nxserver/bundles/nuxeo-core-cache" pkgId="nuxeo-10.10-HF07-1.0.0" version="10.10-HF07"/>
+  <rollback key="nxserver/bundles/nuxeo-core-redis" pkgId="nuxeo-10.10-HF07-1.0.0" version="10.10-HF07"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF07-1.0.0" version="10.10-HF07"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-collections-core" pkgId="nuxeo-10.10-HF07-1.0.0" version="10.10-HF07"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-tag-web" pkgId="nuxeo-10.10-HF07-1.0.0" version="10.10-HF07"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-webapp-base" pkgId="nuxeo-10.10-HF07-1.0.0" version="10.10-HF07"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF07-1.0.0" version="10.10-HF07"/>
+</uninstall>

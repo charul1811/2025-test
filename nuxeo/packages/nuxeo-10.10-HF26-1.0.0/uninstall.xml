@@ -1,0 +1,20 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF26-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="cb43fddec7508a281c3d83c432beb53f"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF26-1.0.0/backup/d6fd9a0b3c77d2fbf0c9deaf12249e3e_nuxeo.defaults" tofile="${env.server.home}/templates/perf/nuxeo.defaults" overwrite="true" md5="a10d9c6b2459373720f976aa0ddaf629"/>
+  <rollback key="nxserver/bundles/nuxeo-core" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-core-api" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-s3" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-dbs" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-sql" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-drive-web-ui" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-easyshare-jsf" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-elasticsearch-core" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-comment" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-comment-api" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-comment-rest-api" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-content-template-manager" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-ui-select2" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF26-1.0.0" version="10.10-HF26"/>
+</uninstall>

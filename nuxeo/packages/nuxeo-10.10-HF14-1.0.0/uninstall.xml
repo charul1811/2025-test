@@ -1,0 +1,23 @@
+<uninstall>
+  <rollback key="nxserver/lib/commons-beanutils" pkgId="nuxeo-10.10-HF14-1.0.0" version="1.9.4"/>
+  <rollback key="nxserver/lib/commons-compress" pkgId="nuxeo-10.10-HF14-1.0.0" version="1.19"/>
+  <rollback key="nxserver/lib/jackson-databind" pkgId="nuxeo-10.10-HF14-1.0.0" version="2.9.9.3"/>
+  <rollback key="nxserver/lib/openpdf" pkgId="nuxeo-10.10-HF14-1.0.0" version="1.2.1"/>
+  <rollback key="nxserver/lib/pdf-html" pkgId="nuxeo-10.10-HF14-1.0.0" version="1.2.1"/>
+  <rollback key="nxserver/lib/pdf-xml" pkgId="nuxeo-10.10-HF14-1.0.0" version="1.2.1"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF14-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="cb09b9c193ea606f76843b92ce26b45f"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF14-1.0.0/backup/f6aea22b34f0d71d7422ad4679e04ca5_bulk-perf-config.xml" tofile="${env.server.home}/templates/perf/nxserver/config/bulk-perf-config.xml" overwrite="true" md5="9330e15144bbc4e53155e6e318f9696a"/>
+  <rollback key="nxserver/lib/nuxeo-stream" pkgId="nuxeo-10.10-HF14-1.0.0" version="10.10-HF14"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-gcp" pkgId="nuxeo-10.10-HF14-1.0.0" version="10.10-HF14"/>
+  <rollback key="nxserver/bundles/nuxeo-core-io" pkgId="nuxeo-10.10-HF14-1.0.0" version="10.10-HF14"/>
+  <rollback key="nxserver/bundles/nuxeo-core-schema" pkgId="nuxeo-10.10-HF14-1.0.0" version="10.10-HF14"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-mongodb" pkgId="nuxeo-10.10-HF14-1.0.0" version="10.10-HF14"/>
+  <rollback key="nxserver/bundles/nuxeo-invite" pkgId="nuxeo-10.10-HF14-1.0.0" version="10.10-HF14"/>
+  <rollback key="nxserver/bundles/nuxeo-permissions" pkgId="nuxeo-10.10-HF14-1.0.0" version="10.10-HF14"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF14-1.0.0" version="10.10-HF14"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-directory-mongodb" pkgId="nuxeo-10.10-HF14-1.0.0" version="10.10-HF14"/>
+  <rollback key="nxserver/bundles/nuxeo-runtime-jtajca" pkgId="nuxeo-10.10-HF14-1.0.0" version="10.10-HF14"/>
+  <rollback key="nxserver/bundles/nuxeo-runtime-mongodb" pkgId="nuxeo-10.10-HF14-1.0.0" version="10.10-HF14"/>
+  <rollback key="nxserver/bundles/nuxeo-runtime-stream" pkgId="nuxeo-10.10-HF14-1.0.0" version="10.10-HF14"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF14-1.0.0" version="10.10-HF14"/>
+</uninstall>

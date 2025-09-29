@@ -1,0 +1,24 @@
+<uninstall>
+  <rollback key="nxserver/lib/expiringmap" pkgId="nuxeo-10.10-HF02-1.0.0" version="0.5.9"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF02-1.0.0/backup/d54f9ea50ca418ca6e62b2200ab24a52_kafka-config.xml.nxftl" tofile="${env.server.home}/templates/common-base/nxserver/config/kafka-config.xml.nxftl" overwrite="true" md5="d1e0a43401f6518f6f6d6ae85182762e"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF02-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="2f5cc8da3671a2340e0ee3facf6f1ded"/>
+  <rollback key="nxserver/lib/nuxeo-stream" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-s3" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-core-cache" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-core-convert" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-core-convert-plugins" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-mongodb" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-sql" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-comment" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-contentview-jsf" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-directory-core" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-directory-multi" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-forms-layout-client" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-oauth" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-tag-core" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-ui-web" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-preview-core" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-runtime-aws" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF02-1.0.0" version="10.10-HF02"/>
+</uninstall>

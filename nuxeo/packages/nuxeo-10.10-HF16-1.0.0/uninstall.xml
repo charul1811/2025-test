@@ -1,0 +1,17 @@
+<uninstall>
+  <rollback key="nxserver/lib/jackson-annotations" pkgId="nuxeo-10.10-HF16-1.0.0" version="2.9.10"/>
+  <rollback key="nxserver/lib/jackson-core" pkgId="nuxeo-10.10-HF16-1.0.0" version="2.9.10"/>
+  <rollback key="nxserver/lib/jackson-databind" pkgId="nuxeo-10.10-HF16-1.0.0" version="2.9.10"/>
+  <rollback key="nxserver/lib/jackson-dataformat-cbor" pkgId="nuxeo-10.10-HF16-1.0.0" version="2.9.10"/>
+  <rollback key="nxserver/lib/jackson-dataformat-properties" pkgId="nuxeo-10.10-HF16-1.0.0" version="2.9.10"/>
+  <rollback key="nxserver/lib/jackson-dataformat-smile" pkgId="nuxeo-10.10-HF16-1.0.0" version="2.9.10"/>
+  <rollback key="nxserver/lib/jackson-dataformat-yaml" pkgId="nuxeo-10.10-HF16-1.0.0" version="2.9.10"/>
+  <rollback key="nxserver/bundles/nuxeo-connect-client" pkgId="nuxeo-10.10-HF16-1.0.0" version="1.7.8"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF16-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="ddef6bf891ad4feab302eff9bee9c39d"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF16-1.0.0/backup/a0e867d2bfd4f92b7d73143f07490021_nuxeo-launcher.jar" tofile="${env.server.home}/bin/nuxeo-launcher.jar" overwrite="true" md5="88c3b60af09633eb06fe7459e91bd5ba"/>
+  <rollback key="nxserver/bundles/nuxeo-core" pkgId="nuxeo-10.10-HF16-1.0.0" version="10.10-HF16"/>
+  <rollback key="nxserver/bundles/nuxeo-elasticsearch-core" pkgId="nuxeo-10.10-HF16-1.0.0" version="10.10-HF16"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF16-1.0.0" version="10.10-HF16"/>
+  <rollback key="nxserver/bundles/nuxeo-preview-core" pkgId="nuxeo-10.10-HF16-1.0.0" version="10.10-HF16"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF16-1.0.0" version="10.10-HF16"/>
+</uninstall>

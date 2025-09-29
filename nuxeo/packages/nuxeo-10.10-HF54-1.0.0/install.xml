@@ -1,0 +1,16 @@
+<install>
+  <update upgradeOnly="true" file="${package.root}/install/bundlesupdate/nxserver/bundles" todir="${env.server.home}/nxserver/bundles" />
+  <update upgradeOnly="true" file="${package.root}/install/bundlesupdate/nxserver/lib" todir="${env.server.home}/nxserver/lib" />
+  <copy overwrite="true" file="${package.root}/templates" todir="${env.server.home}" />
+  <update file="${package.root}/install/tomcatupdate/bin" todir="${env.server.home}/bin" />
+  <update file="${package.root}/install/tomcatupdate/lib" todir="${env.server.home}/lib" />
+  <delete file="${env.server.home}/nxserver/lib/tomcat-juli-9.0.53.jar" />
+  <delete file="${env.server.home}/nxserver/lib/tomcat-jdbc-9.0.53.jar" />
+  <update file="${package.root}/install/libsadd/nxserver/lib" todir="${env.server.home}/nxserver/lib" />
+  <update allowDowngrade="true" upgradeOnly="true" file="${package.root}/install/libsupdate/nxserver/lib" todir="${env.server.home}/nxserver/lib" />
+  <update upgradeOnly="true" file="${package.root}/install/libsupdate/lib" todir="${env.server.home}/lib" />
+  <delete file="${env.server.home}/nxserver/lib/HikariCP-java6-2.3.13.jar" />
+  <delete file="${env.server.home}/nxserver/lib/jempbox-1.8.16.jar" />
+  <delete file="${env.server.home}/nxserver/lib/jackson-mapper-asl-1.8.1.jar" />
+  <delete file="${env.server.home}/nxserver/lib/xz-1.8.jar" />
+</install>

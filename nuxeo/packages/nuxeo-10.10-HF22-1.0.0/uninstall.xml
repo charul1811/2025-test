@@ -1,0 +1,18 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF22-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="471faff528adbccee34bcf121d6a120b"/>
+  <rollback key="nxserver/lib/nuxeo-stream" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+  <rollback key="nxserver/bundles/nuxeo-core" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+  <rollback key="nxserver/bundles/nuxeo-core-api" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+  <rollback key="nxserver/bundles/nuxeo-core-bulk" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+  <rollback key="nxserver/bundles/nuxeo-core-io" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+  <rollback key="nxserver/bundles/nuxeo-drive-web-ui" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+  <rollback key="nxserver/bundles/nuxeo-elasticsearch-core" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-comment" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-comment-api" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+  <rollback key="nxserver/bundles/nuxeo-rest-api-server" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+  <rollback key="nxserver/bundles/nuxeo-routing-api" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+  <rollback key="nxserver/bundles/nuxeo-routing-core" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+  <rollback key="nxserver/bundles/nuxeo-routing-rest-api" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF22-1.0.0" version="10.10-HF22"/>
+</uninstall>

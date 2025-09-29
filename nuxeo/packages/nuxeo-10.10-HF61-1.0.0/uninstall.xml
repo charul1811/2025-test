@@ -1,0 +1,19 @@
+<uninstall>
+  <rollback key="templates/mongodb/nxserver/lib/quartz-mongodb" pkgId="nuxeo-10.10-HF61-1.0.0" version="2.0.0-NX4"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF61-1.0.0/backup/a85b2b16c38493957573b787446633a0_workmanager-queue-config.xml.nxftl" tofile="${env.server.home}/templates/common-base/nxserver/config/workmanager-queue-config.xml.nxftl" overwrite="true" md5="57c81605f22632ddf5ce1aa0aa978067"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF61-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="5f992c6e192aa7fb9c823a96e1d3919d"/>
+  <rollback key="nxserver/bundles/nuxeo-automation-server" pkgId="nuxeo-10.10-HF61-1.0.0" version="10.10-HF61"/>
+  <rollback key="nxserver/bundles/nuxeo-core" pkgId="nuxeo-10.10-HF61-1.0.0" version="10.10-HF61"/>
+  <rollback key="nxserver/bundles/nuxeo-core-api" pkgId="nuxeo-10.10-HF61-1.0.0" version="10.10-HF61"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-s3" pkgId="nuxeo-10.10-HF61-1.0.0" version="10.10-HF61"/>
+  <rollback key="nxserver/bundles/nuxeo-core-bulk" pkgId="nuxeo-10.10-HF61-1.0.0" version="10.10-HF61"/>
+  <rollback key="nxserver/bundles/nuxeo-core-cache" pkgId="nuxeo-10.10-HF61-1.0.0" version="10.10-HF61"/>
+  <rollback key="nxserver/bundles/nuxeo-core-io" pkgId="nuxeo-10.10-HF61-1.0.0" version="10.10-HF61"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-dbs" pkgId="nuxeo-10.10-HF61-1.0.0" version="10.10-HF61"/>
+  <rollback key="nxserver/bundles/nuxeo-elasticsearch-core" pkgId="nuxeo-10.10-HF61-1.0.0" version="10.10-HF61"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF61-1.0.0" version="10.10-HF61"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-csv-export" pkgId="nuxeo-10.10-HF61-1.0.0" version="10.10-HF61"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-login-saml2" pkgId="nuxeo-10.10-HF61-1.0.0" version="10.10-HF61"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-rendition-core" pkgId="nuxeo-10.10-HF61-1.0.0" version="10.10-HF61"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF61-1.0.0" version="10.10-HF61"/>
+</uninstall>

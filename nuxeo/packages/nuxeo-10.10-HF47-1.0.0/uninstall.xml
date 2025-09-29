@@ -1,0 +1,13 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF47-1.0.0/backup/a8500aa3626cf778fe6ba4603d6b2e34_nuxeo-wizard.war" tofile="${env.server.home}/templates/nuxeo-wizard.war" overwrite="true" md5="ee36e0641d56d4c1e5899b978d1f8210"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF47-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="25340d261d95836a5cf919387f5219f9"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF47-1.0.0/backup/a0e867d2bfd4f92b7d73143f07490021_nuxeo-launcher.jar" tofile="${env.server.home}/bin/nuxeo-launcher.jar" overwrite="true" md5="f5bddc8c9180c151a9bd099620d6efdc"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-s3" pkgId="nuxeo-10.10-HF47-1.0.0" version="10.10-HF47"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-dbs" pkgId="nuxeo-10.10-HF47-1.0.0" version="10.10-HF47"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-sql" pkgId="nuxeo-10.10-HF47-1.0.0" version="10.10-HF47"/>
+  <rollback key="nxserver/bundles/nuxeo-launcher-commons" pkgId="nuxeo-10.10-HF47-1.0.0" version="10.10-HF47"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF47-1.0.0" version="10.10-HF47"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-oauth" pkgId="nuxeo-10.10-HF47-1.0.0" version="10.10-HF47"/>
+  <rollback key="nxserver/bundles/nuxeo-thumbnail" pkgId="nuxeo-10.10-HF47-1.0.0" version="10.10-HF47"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF47-1.0.0" version="10.10-HF47"/>
+</uninstall>

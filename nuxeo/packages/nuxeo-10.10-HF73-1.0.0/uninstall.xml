@@ -1,0 +1,25 @@
+<uninstall>
+  <rollback key="nxserver/lib/jackson-annotations" pkgId="nuxeo-10.10-HF73-1.0.0" version="2.11.4"/>
+  <rollback key="nxserver/lib/jackson-core" pkgId="nuxeo-10.10-HF73-1.0.0" version="2.11.4"/>
+  <rollback key="nxserver/lib/jackson-dataformat-cbor" pkgId="nuxeo-10.10-HF73-1.0.0" version="2.11.4"/>
+  <rollback key="nxserver/lib/jackson-dataformat-properties" pkgId="nuxeo-10.10-HF73-1.0.0" version="2.11.4"/>
+  <rollback key="nxserver/lib/jackson-dataformat-smile" pkgId="nuxeo-10.10-HF73-1.0.0" version="2.11.4"/>
+  <rollback key="nxserver/lib/jackson-dataformat-yaml" pkgId="nuxeo-10.10-HF73-1.0.0" version="2.11.4"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF73-1.0.0/backup/5eeac4840c5031e20017e3e81bcce25b_elasticsearch-doc-mapping.json" tofile="${env.server.home}/templates/common-base/nxserver/config/elasticsearch-doc-mapping.json" overwrite="true" md5="9937844db42c80646476aacff735491c"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF73-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="a1c3160468c4a6622fab7da1fae8aa93"/>
+  <rollback key="nxserver/bundles/nuxeo-core" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+  <rollback key="nxserver/bundles/nuxeo-core-api" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-common" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+  <rollback key="nxserver/bundles/nuxeo-core-event" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-mongodb" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+  <rollback key="nxserver/bundles/nuxeo-easyshare-web-ui" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+  <rollback key="nxserver/bundles/nuxeo-elasticsearch-core" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+  <rollback key="nxserver/bundles/nuxeo-permissions" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-directory-mongodb" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-imaging-api" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-imaging-core" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-video-convert" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+  <rollback key="nxserver/bundles/nuxeo-wopi" pkgId="nuxeo-10.10-HF73-1.0.0" version="10.10-HF73"/>
+</uninstall>

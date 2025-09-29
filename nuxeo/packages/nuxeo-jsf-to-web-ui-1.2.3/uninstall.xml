@@ -1,0 +1,5 @@
+<uninstall>
+  <delete file="${env.server.home}/sdk/test-artifacts-jsf-to-web-ui.properties" md5="4efc02829d7d64350cee72ff6d87e7fd"/>
+  <delete file="${env.server.home}/sdk/artifacts-jsf-to-web-ui.properties" md5="8d79b1e82d1aa2e9ec5fc4c4b6133eda"/>
+  <rollback key="nxserver/bundles/nuxeo-jsf-to-web-ui" pkgId="nuxeo-jsf-to-web-ui-1.2.3" version="10.10"/>
+</uninstall>

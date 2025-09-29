@@ -1,0 +1,22 @@
+<uninstall>
+  <rollback key="nxserver/bundles/nuxeo-connect-client" pkgId="nuxeo-10.10-HF37-1.0.0" version="1.8.2"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF37-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="72859c6302f7cb517691f7f72476f02f"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF37-1.0.0/backup/a0e867d2bfd4f92b7d73143f07490021_nuxeo-launcher.jar" tofile="${env.server.home}/bin/nuxeo-launcher.jar" overwrite="true" md5="882dfce32ae60573135447e5da7a52ba"/>
+  <rollback key="nxserver/lib/nuxeo-stream" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-automation-core" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-automation-server" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-core-api" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-common" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-gcp" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-s3" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-core-io" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-convert" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-imaging-core" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-rendition-core" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-video-core" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-retention-web-ui" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-thumbnail" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-user-profile" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF37-1.0.0" version="10.10-HF37"/>
+</uninstall>

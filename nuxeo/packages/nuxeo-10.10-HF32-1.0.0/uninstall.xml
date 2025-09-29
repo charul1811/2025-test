@@ -1,0 +1,31 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF32-1.0.0/backup/9f415cf364a9bbd49df4262f99834d0b_blacklist.nxftl" tofile="${env.server.home}/templates/common/config/blacklist.nxftl" overwrite="true" md5="c044c40b69da64106e036a2b3422571a"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF32-1.0.0/backup/ceb1ecc425d666ef58e994a973e96c58_nuxeo.defaults" tofile="${env.server.home}/templates/common-base/nuxeo.defaults" overwrite="true" md5="7d11c76944283110a9d196b0351bc175"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF32-1.0.0/backup/a1568c302420fa9ee4597a8888347aa5_nuxeo.defaults" tofile="${env.server.home}/templates/mongodb-audit/nuxeo.defaults" overwrite="true" md5="eceedf64f60d3bfdcbcf6c464f13086c"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF32-1.0.0/backup/a8500aa3626cf778fe6ba4603d6b2e34_nuxeo-wizard.war" tofile="${env.server.home}/templates/nuxeo-wizard.war" overwrite="true" md5="282e231ff765634a910b337f98c0b689"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF32-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="5af00cbd166696e5de5cb8766ce2a37c"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF32-1.0.0/backup/a0e867d2bfd4f92b7d73143f07490021_nuxeo-launcher.jar" tofile="${env.server.home}/bin/nuxeo-launcher.jar" overwrite="true" md5="33dfebf90d0d9cf4358659a4ecc4335d"/>
+  <rollback key="nxserver/lib/nuxeo-core-storage-sql-extensions" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-core" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-core-api" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-dbs" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-sql" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-elasticsearch-core" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-launcher-commons" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-comment" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-comment-api" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-comment-rest-api" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-filemanager-api" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-filemanager-core" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-oauth" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-rendition-core" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-spreadsheet-web" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-spreadsheet-web-ui" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-rest-api-server" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-routing-core" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-routing-rest-api" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-routing-web" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-runtime-stream" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF32-1.0.0" version="10.10-HF32"/>
+</uninstall>

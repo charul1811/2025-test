@@ -1,0 +1,19 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF20-1.0.1/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="99c8ff2f971b363b02759d380fa39d6e"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF20-1.0.1/backup/a0e867d2bfd4f92b7d73143f07490021_nuxeo-launcher.jar" tofile="${env.server.home}/bin/nuxeo-launcher.jar" overwrite="true" md5="f183bf5a8b223f00e544514b553428ef"/>
+  <rollback key="nxserver/lib/commons-exec" pkgId="nuxeo-10.10-HF20-1.0.1" version="1.3"/>
+  <rollback key="nxserver/bundles/nuxeo-mail" pkgId="nuxeo-10.10-HF20-1.0.1" version="10.10-HF20"/>
+  <rollback key="nxserver/bundles/nuxeo-automation-core" pkgId="nuxeo-10.10-HF20-1.0.1" version="10.10-HF20"/>
+  <rollback key="nxserver/bundles/nuxeo-common" pkgId="nuxeo-10.10-HF20-1.0.1" version="10.10-HF20"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-s3" pkgId="nuxeo-10.10-HF20-1.0.1" version="10.10-HF20"/>
+  <rollback key="nxserver/bundles/nuxeo-dam-web-ui" pkgId="nuxeo-10.10-HF20-1.0.1" version="10.10-HF20"/>
+  <rollback key="nxserver/bundles/nuxeo-invite" pkgId="nuxeo-10.10-HF20-1.0.1" version="10.10-HF20"/>
+  <rollback key="nxserver/bundles/nuxeo-launcher-commons" pkgId="nuxeo-10.10-HF20-1.0.1" version="10.10-HF20"/>
+  <rollback key="nxserver/bundles/nuxeo-opencmis-impl" pkgId="nuxeo-10.10-HF20-1.0.1" version="10.10-HF20"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF20-1.0.1" version="10.10-HF20"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-mail-core" pkgId="nuxeo-10.10-HF20-1.0.1" version="10.10-HF20"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-notification-core" pkgId="nuxeo-10.10-HF20-1.0.1" version="10.10-HF20"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-user-registration-core" pkgId="nuxeo-10.10-HF20-1.0.1" version="10.10-HF20"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-web-common" pkgId="nuxeo-10.10-HF20-1.0.1" version="10.10-HF20"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF20-1.0.1" version="10.10-HF20"/>
+</uninstall>

@@ -1,0 +1,20 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF12-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="37ae7a879993210fb4835db2cc597450"/>
+  <rollback key="nxserver/bundles/nuxeo-apidoc-core" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-apidoc-webengine" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-binary-metadata" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-gcp" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-s3" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-core-cache" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-elasticsearch-core" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-liveconnect-core" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-3d-core" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-collections-core" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-imaging-core" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-rendition-core" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-spreadsheet-web-ui" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-quota-core" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-routing-core" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF12-1.0.0" version="10.10-HF12"/>
+</uninstall>

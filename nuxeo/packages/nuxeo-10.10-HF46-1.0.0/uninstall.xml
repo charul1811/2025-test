@@ -1,0 +1,8 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF46-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="1ffd8df2723886ba45a995c4a94cad94"/>
+  <rollback key="nxserver/bundles/nuxeo-elasticsearch-core" pkgId="nuxeo-10.10-HF46-1.0.0" version="10.10-HF46"/>
+  <rollback key="nxserver/bundles/nuxeo-elasticsearch-http-read-only" pkgId="nuxeo-10.10-HF46-1.0.0" version="10.10-HF46"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF46-1.0.0" version="10.10-HF46"/>
+  <rollback key="nxserver/bundles/nuxeo-search-ui" pkgId="nuxeo-10.10-HF46-1.0.0" version="10.10-HF46"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF46-1.0.0" version="10.10-HF46"/>
+</uninstall>

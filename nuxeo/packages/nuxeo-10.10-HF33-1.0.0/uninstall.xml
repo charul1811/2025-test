@@ -1,0 +1,48 @@
+<uninstall>
+  <rollback key="templates/mongodb/nxserver/lib/mongo-java-driver" pkgId="nuxeo-10.10-HF33-1.0.0" version="3.12.1"/>
+  <rollback key="lib/annotations-api" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/catalina" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/catalina-ant" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/catalina-ha" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/catalina-ssi" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/catalina-storeconfig" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/catalina-tribes" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/el-api" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/jasper" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/jasper-el" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/jaspic-api" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/jsp-api" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/servlet-api" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-api" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-coyote" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-dbcp" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-i18n-cs" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-i18n-de" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-i18n-es" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-i18n-fr" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-i18n-ja" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-i18n-ko" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-i18n-pt-BR" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-i18n-ru" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-i18n-zh-CN" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-jdbc" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-jni" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-util" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-util-scan" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/tomcat-websocket" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="lib/websocket-api" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="bin/bootstrap" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="bin/commons-daemon" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <rollback key="bin/tomcat-juli" pkgId="nuxeo-10.10-HF33-1.0.0" version="9.0.38"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF33-1.0.0/backup/a8500aa3626cf778fe6ba4603d6b2e34_nuxeo-wizard.war" tofile="${env.server.home}/templates/nuxeo-wizard.war" overwrite="true" md5="ac5fce4321854fbabc48bbe9a1ad5f2f"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF33-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="4d6dfc149a7ce8c54f023b641e802d50"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF33-1.0.0/backup/a0e867d2bfd4f92b7d73143f07490021_nuxeo-launcher.jar" tofile="${env.server.home}/bin/nuxeo-launcher.jar" overwrite="true" md5="c5127e31cb5cd3828cf9d50c749301ab"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-gcp" pkgId="nuxeo-10.10-HF33-1.0.0" version="10.10-HF33"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-s3-web-ui" pkgId="nuxeo-10.10-HF33-1.0.0" version="10.10-HF33"/>
+  <rollback key="nxserver/bundles/nuxeo-core-bulk" pkgId="nuxeo-10.10-HF33-1.0.0" version="10.10-HF33"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-dbs" pkgId="nuxeo-10.10-HF33-1.0.0" version="10.10-HF33"/>
+  <rollback key="nxserver/bundles/nuxeo-launcher-commons" pkgId="nuxeo-10.10-HF33-1.0.0" version="10.10-HF33"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF33-1.0.0" version="10.10-HF33"/>
+  <rollback key="nxserver/bundles/nuxeo-routing-rest-api" pkgId="nuxeo-10.10-HF33-1.0.0" version="10.10-HF33"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF33-1.0.0" version="10.10-HF33"/>
+</uninstall>

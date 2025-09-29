@@ -1,0 +1,11 @@
+<!-- See documentation at http://doc.nuxeo.com/x/IgIz -->
+<install>
+  
+   <update file="${package.root}/install/bundles" todir="${env.bundles}" />
+  
+  
+   <copy file="${package.root}/install/artifacts-jsf-to-web-ui.properties"
+     todir="${env.server.home}/sdk" overwrite="true" />
+   <copy file="${package.root}/install/test-artifacts-jsf-to-web-ui.properties"
+     todir="${env.server.home}/sdk" overwrite="true" />
+</install>

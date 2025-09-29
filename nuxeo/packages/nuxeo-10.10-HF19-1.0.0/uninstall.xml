@@ -1,0 +1,26 @@
+<uninstall>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF19-1.0.0/backup/ceb1ecc425d666ef58e994a973e96c58_nuxeo.defaults" tofile="${env.server.home}/templates/common-base/nuxeo.defaults" overwrite="true" md5="eb220a8d9742361fb21538c24a59ab7c"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF19-1.0.0/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="af58681c7edebc1bc3162513c30a4fa9"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF19-1.0.0/backup/a0e867d2bfd4f92b7d73143f07490021_nuxeo-launcher.jar" tofile="${env.server.home}/bin/nuxeo-launcher.jar" overwrite="true" md5="8b1a9aa56d2ae8394c39e761113667a1"/>
+  <rollback key="nxserver/bundles/nuxeo-api-playground" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-automation-features" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-connect-standalone" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-core" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-core-api" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-s3-web-ui" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-core-bulk" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-core-io" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-core-management" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-drive-web-ui" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-3d-core" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-collections-core" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-directory-core" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-imaging-core" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-pdf-utils" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-rendition-web" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-tag-core" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-web-common" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-runtime-stream" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF19-1.0.0" version="10.10-HF19"/>
+</uninstall>

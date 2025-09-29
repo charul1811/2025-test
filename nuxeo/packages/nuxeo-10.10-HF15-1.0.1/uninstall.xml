@@ -1,0 +1,41 @@
+<uninstall>
+  <rollback key="nxserver/lib/jackson-annotations" pkgId="nuxeo-10.10-HF15-1.0.1" version="2.10.0"/>
+  <rollback key="nxserver/lib/jackson-core" pkgId="nuxeo-10.10-HF15-1.0.1" version="2.10.0"/>
+  <rollback key="nxserver/lib/jackson-databind" pkgId="nuxeo-10.10-HF15-1.0.1" version="2.10.0"/>
+  <rollback key="nxserver/lib/jackson-dataformat-cbor" pkgId="nuxeo-10.10-HF15-1.0.1" version="2.10.0"/>
+  <rollback key="nxserver/lib/jackson-dataformat-properties" pkgId="nuxeo-10.10-HF15-1.0.1" version="2.10.0"/>
+  <rollback key="nxserver/lib/jackson-dataformat-smile" pkgId="nuxeo-10.10-HF15-1.0.1" version="2.10.0"/>
+  <rollback key="nxserver/lib/jackson-dataformat-yaml" pkgId="nuxeo-10.10-HF15-1.0.1" version="2.10.0"/>
+  <rollback key="nxserver/lib/kafka-clients" pkgId="nuxeo-10.10-HF15-1.0.1" version="2.1.1"/>
+  <rollback key="nxserver/lib/zstd-jni-1.3.7" pkgId="nuxeo-10.10-HF15-1.0.1" version="1"/>
+  <rollback key="templates/mongodb/nxserver/lib/quartz-mongodb" pkgId="nuxeo-10.10-HF15-1.0.1" version="2.0.0-NX3"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF15-1.0.1/backup/ed8ceaa6ce8d09e8166574d5420e02a0_quartz.properties.nxftl" tofile="${env.server.home}/templates/mongodb/nxserver/config/quartz.properties.nxftl" overwrite="true" md5="f601ae8e59579def5875a6cb1e28b66d"/>
+  <copy file="${env.server.home}/packages/store/nuxeo-10.10-HF15-1.0.1/backup/af2bfeac9fe3304cf23e23eeb46fe818_nuxeo.defaults" tofile="${env.server.home}/templates/nuxeo.defaults" overwrite="true" md5="48f99c54f0a8cc343635b3df90c7114a"/>
+  <rollback key="nxserver/lib/nuxeo-stream" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-automation-core" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-automation-features" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-automation-server" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-binary-metadata" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-core-api" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-common" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-core-binarymanager-s3" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-core-event" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-core-io" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-core-management" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-core-storage-mongodb" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-diff-content" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-opencmis-impl" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-audit-core" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-imaging-core" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-query-api" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-rendition-core" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-ui-web" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-platform-web-common" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-preview-jsf" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-rest-api-server" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-runtime-kv" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-runtime-stream" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-search-core" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-web-ui" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+  <rollback key="nxserver/bundles/nuxeo-webengine-core" pkgId="nuxeo-10.10-HF15-1.0.1" version="10.10-HF15"/>
+</uninstall>
