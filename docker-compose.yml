@@ -1,17 +1,99 @@
+version: '3.8'
+
 services:
+  # Zookeeper - Required for Kafka
+  zookeeper:
+    container_name: zookeeper
+    image: confluentinc/cp-zookeeper:7.5.0
+    restart: always
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+    volumes:
+      - zookeeper-data:/var/lib/zookeeper/data
+      - zookeeper-logs:/var/lib/zookeeper/log
+    networks:
+      - nuxeo-network
+
+  # Kafka Broker
+  kafka:
+    container_name: kafka
+    image: confluentinc/cp-kafka:7.5.0
+    restart: always
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_LOG_RETENTION_HOURS: 168
+      KAFKA_LOG_SEGMENT_BYTES: 1073741824
+    volumes:
+      - kafka-data:/var/lib/kafka/data
+    networks:
+      - nuxeo-network
+    healthcheck:
+      test: ["CMD-SHELL", "kafka-broker-api-versions --bootstrap-server localhost:9092"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+  # Kafka UI (Optional - for monitoring)
+  kafka-ui:
+    container_name: kafka-ui
+    image: provectuslabs/kafka-ui:latest
+    restart: always
+    depends_on:
+      - kafka
+    ports:
+      - "8090:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+      KAFKA_CLUSTERS_0_ZOOKEEPER: zookeeper:2181
+    networks:
+      - nuxeo-network
+
+  # Elasticsearch
+  elasticsearch:
+    container_name: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.5.3
+    restart: always
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+    volumes:
+      - es-data:/usr/share/elasticsearch/data
+    networks:
+      - nuxeo-network
 
   # Nuxeo main image
   nuxeo:
     container_name: nuxeo
     image: nuxeo:latest
     restart: always
+    depends_on:
+      - elasticsearch
+      - kafka
+      - zookeeper
     ports:
       - "8091:8080"
     environment:
-
       # General Config
       NUXEO_URL: localhost
-      NUXEO_PACKAGES:  nuxeo-web-ui nuxeo-platform-getting-started
+      NUXEO_PACKAGES: nuxeo-web-ui nuxeo-platform-getting-started
       NUXEO_DATA: /var/lib/nuxeo/data
       NUXEO_LOG: /var/log/nuxeo
       NUXEO_CLID: "bc6062de-7121-4cca-8b2b-8204be63cfa8.1760785134.ijGpSxSE3xZzn60uktp67xdkUfBc7gOBctrrVM80Ay/k+9oCHHitMfymE5zBmjHLhI3r5Fsgg/fxgHt3qBhP1HYPtO9dTwcNmcPX69fSLiWAMGA/Kgn7wmWPUy9UEpDDCOMZSvP2TrpStGgSyD20F0nZ4I3CgL/tEPe49y4CSiZzcFjykWDV8NJ6Eev3KI+77NXKJEsjLF6FE2Do4sdZC7pxA9dom4K1cAJUcfRftKtxLI32jJRZReuTbCR788pwLgY70DF49VoQ80wR/cZhiloM0Jgm3qtVkbJazoD1GEkDjFI3qLa6KX9VichBleB+SZxjX+wThNDkpwPvgX3F4g==--88597e06-34e5-4476-bc28-af3424babb9e"
@@ -20,19 +102,45 @@ services:
       NUXEO_DB_NAME: "nuxeo"
       NUXEO_DB_USER: "nuxeo"
       NUXEO_DB_PASSWORD: "nuxeo"
-      # DB Config
-    volumes:
-    # Mount for development - hot reload
-    #  - ./custom-bundles:/opt/nuxeo/server/nxserver/bundles:ro
-    - ./logs:/var/log/nuxeo
-    - ./nuxeo.conf:/opt/nuxeo/server/bin/nuxeo.conf:ro
-    - ./nuxeo.conf:/etc/nuxeo/nuxeo.conf
-    - ./nuxeo/packages:/opt/nuxeo/server/packages/store
 
-  elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:6.5.3
-    environment:
-      - discovery.type=single-node
-      - xpack.security.enabled=false
-    ports:
-      - "9200:9200"
+      # Kafka Configuration
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      NUXEO_STREAM_KAFKA_ENABLED: "true"
+      KAFKA_ENABLED: "true"
+
+      # Elasticsearch Configuration
+      ELASTICSEARCH_ADDRESS: http://elasticsearch:9200
+      ELASTICSEARCH_CLUSTER_NAME: elasticsearch
+      ELASTICSEARCH_INDEX_NAME: nuxeo
+
+      # Stream configuration via env vars
+      NUXEO_STREAM_WORK_ENABLED: "true"
+      NUXEO_STREAM_AUDIT_ENABLED: "true"
+      NUXEO_STREAM_PUBSUB_ENABLED: "true"
+    volumes:
+      # Mount for development - hot reload
+      # - ./custom-bundles:/opt/nuxeo/server/nxserver/bundles:ro
+      - ./logs:/var/log/nuxeo
+      # Removed nuxeo.conf mount - using environment variables instead
+      - nuxeo-data:/var/lib/nuxeo/data
+      # - ./nuxeo/packages:/opt/nuxeo/server/packages/store
+    networks:
+      - nuxeo-network
+
+# Named volumes for data persistence
+volumes:
+  zookeeper-data:
+    driver: local
+  zookeeper-logs:
+    driver: local
+  kafka-data:
+    driver: local
+  es-data:
+    driver: local
+  nuxeo-data:
+    driver: local
+
+# Network for inter-container communication
+networks:
+  nuxeo-network:
+    driver: bridge
