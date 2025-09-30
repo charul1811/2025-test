@@ -46,3 +46,94 @@
 ======================================================================
 = Component Loading Status: Pending: 0 / Missing: 0 / Unstarted: 0 / Total: 571
 ======================================================================
+2025-09-30T11:50:15,060 INFO  [main] [org.nuxeo.osgi.application.loader.FrameworkLoader] 
+======================================================================
+= Starting Nuxeo Framework
+======================================================================
+  * Distribution Version = 10.10
+  * Distribution Date = 201901211253
+  * Server home = /opt/nuxeo/server
+  * Runtime home = /opt/nuxeo/server/nxserver
+  * Data Directory = /var/lib/nuxeo/data
+  * Log Directory = /var/log/nuxeo
+  * Configuration Directory = /opt/nuxeo/server/nxserver/config
+  * Temp Directory = /opt/nuxeo/server/tmp
+======================================================================
+2025-09-30T11:50:19,878 WARN  [main] [org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent] Command not available: videoClosedCaptionsExtractor (command ccextractor not found in system path (descriptor CommandLineDescriptor[name=videoClosedCaptionsExtractor,enabled=true,available=false,command=ccextractor,parameterString=#{sourceFilePath} -out=#{outFormat} -trim -o #{outFilePath},testParameterString=,winParameterString=<null>,winTestParameterString=,winCommand=<null>,tester=<null>,readOutput=true,installationDirective=You need to install ccextractor.,installErrorMessage=<null>,timeout=<null>]). You need to install ccextractor.)
+2025-09-30T11:50:19,883 WARN  [main] [org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent] Command not available: videoPartClosedCaptionsExtractor (command ccextractor not found in system path (descriptor CommandLineDescriptor[name=videoPartClosedCaptionsExtractor,enabled=true,available=false,command=ccextractor,parameterString=#{sourceFilePath} -out=#{outFormat} -startat #{startAt} -endat #{endAt} -trim -o #{outFilePath},testParameterString=,winParameterString=<null>,winTestParameterString=,winCommand=<null>,tester=<null>,readOutput=true,installationDirective=You need to install ccextractor.,installErrorMessage=<null>,timeout=<null>]). You need to install ccextractor.)
+2025-09-30T11:50:24,952 WARN  [main] [org.nuxeo.elasticsearch.core.ElasticSearchEmbeddedNode] Elasticsearch embedded configuration is ONLY for testing purpose. You need to create a dedicated Elasticsearch cluster for production.
+2025-09-30T11:50:30,492 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Summer in the USA with id=2f33e13b-70e1-446c-a053-128bddc77af1 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-30T11:50:30,495 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Summer in the USA with id=2f33e13b-70e1-446c-a053-128bddc77af1 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-30T11:50:30,503 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document To the Moon and back with id=b0f3da9a-9b84-4b19-b7af-ccef24203c73 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-30T11:50:30,506 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document To the Moon and back with id=b0f3da9a-9b84-4b19-b7af-ccef24203c73 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-30T11:50:30,515 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Winter in the USA with id=12f574b8-39ff-4bfd-9e3f-b40da61423f4 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-30T11:50:30,518 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Winter in the USA with id=12f574b8-39ff-4bfd-9e3f-b40da61423f4 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-30T11:50:30,558 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document 2015 Annual Conference with id=d13018b2-0467-4d74-9536-cfa7c529b717 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-30T11:50:30,560 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document 2015 Annual Conference with id=d13018b2-0467-4d74-9536-cfa7c529b717 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-30T11:50:30,568 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document 2016 Annual Conference with id=baf61ced-78e5-42d0-bef1-e6197b3e7ba2 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-30T11:50:30,570 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document 2016 Annual Conference with id=baf61ced-78e5-42d0-bef1-e6197b3e7ba2 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-30T11:50:30,578 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Geller-Bing Wedding with id=3605528e-1bd6-42ff-8f45-96be7ec91fd9 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-30T11:50:30,580 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Geller-Bing Wedding with id=3605528e-1bd6-42ff-8f45-96be7ec91fd9 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-30T11:50:30,649 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Auto Loan Con with id=50b4f04a-a028-43c8-b7b8-5e3b12b46cbc and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-30T11:50:30,651 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Auto Loan Con with id=50b4f04a-a028-43c8-b7b8-5e3b12b46cbc and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-30T11:50:30,658 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Credit Card C with id=5ead2937-878d-4e7d-bcf9-ddc0989e3e1f and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-30T11:50:30,660 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Credit Card C with id=5ead2937-878d-4e7d-bcf9-ddc0989e3e1f and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-30T11:50:30,665 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Mortgage Cont with id=2833aae9-4153-4d89-abb8-d3608decbf99 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-30T11:50:30,667 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Mortgage Cont with id=2833aae9-4153-4d89-abb8-d3608decbf99 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-30T11:50:30,671 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Student Loan with id=a2e62823-c6c8-4eb3-9500-0b2ef392f9b7 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-30T11:50:30,673 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Money Bank Student Loan with id=a2e62823-c6c8-4eb3-9500-0b2ef392f9b7 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-30T11:50:30,709 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Beyond Space - Website S with id=ce72e75e-9a67-4cd3-bdd5-dfb9a499735c and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-30T11:50:30,711 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Beyond Space - Website S with id=ce72e75e-9a67-4cd3-bdd5-dfb9a499735c and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-30T11:50:30,720 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Beyond Space - Website c with id=51b4733f-fe56-4137-89da-92307043c73e and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-30T11:50:30,721 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Beyond Space - Website c with id=51b4733f-fe56-4137-89da-92307043c73e and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-30T11:50:30,754 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Empty Venue Location with id=a884e3b6-1a5b-401a-b0c0-fca20ae5c74a and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-30T11:50:30,755 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Empty Venue Location with id=a884e3b6-1a5b-401a-b0c0-fca20ae5c74a and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-30T11:50:30,777 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Venue, Equipment and Per with id=e8bf192a-1e30-4fe1-929e-e23894f43911 and type=BCContract contains the facet 'BCTrashMgt', which is not registered as available in the schemaManager. This facet will be ignored.
+2025-09-30T11:50:30,779 WARN  [main] [org.nuxeo.ecm.core.io.impl.AbstractDocumentModelWriter] The document Venue, Equipment and Per with id=e8bf192a-1e30-4fe1-929e-e23894f43911 and type=DocumentTypeImpl(BCContract) contains the schema 'bctrashmgt', which is not registered as available in the schemaManager. This schema will be ignored.
+2025-09-30T11:50:31,485 INFO  [main] [org.nuxeo.runtime.osgi.OSGiRuntimeService] Nuxeo Platform Started
+======================================================================
+= Component Loading Status: Pending: 0 / Missing: 0 / Unstarted: 0 / Total: 571
+======================================================================
+2025-09-30T11:50:34,580 WARN  [elasticsearch[nuxeoNode][scheduler][T#1]] [org.elasticsearch.monitor.jvm.JvmGcMonitorService] [gc][7] overhead, spent [607ms] collecting in the last [1s]
+2025-09-30T12:06:28,540 INFO  [main] [org.nuxeo.osgi.application.loader.FrameworkLoader] 
+======================================================================
+= Starting Nuxeo Framework
+======================================================================
+  * Distribution Version = 10.10
+  * Distribution Date = 201901211253
+  * Server home = /opt/nuxeo/server
+  * Runtime home = /opt/nuxeo/server/nxserver
+  * Data Directory = /var/lib/nuxeo/data
+  * Log Directory = /var/log/nuxeo
+  * Configuration Directory = /opt/nuxeo/server/nxserver/config
+  * Temp Directory = /opt/nuxeo/server/tmp
+======================================================================
+2025-09-30T12:06:36,873 WARN  [main] [org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent] Command not available: videoClosedCaptionsExtractor (command ccextractor not found in system path (descriptor CommandLineDescriptor[name=videoClosedCaptionsExtractor,enabled=true,available=false,command=ccextractor,parameterString=#{sourceFilePath} -out=#{outFormat} -trim -o #{outFilePath},testParameterString=,winParameterString=<null>,winTestParameterString=,winCommand=<null>,tester=<null>,readOutput=true,installationDirective=You need to install ccextractor.,installErrorMessage=<null>,timeout=<null>]). You need to install ccextractor.)
+2025-09-30T12:06:36,878 WARN  [main] [org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent] Command not available: videoPartClosedCaptionsExtractor (command ccextractor not found in system path (descriptor CommandLineDescriptor[name=videoPartClosedCaptionsExtractor,enabled=true,available=false,command=ccextractor,parameterString=#{sourceFilePath} -out=#{outFormat} -startat #{startAt} -endat #{endAt} -trim -o #{outFilePath},testParameterString=,winParameterString=<null>,winTestParameterString=,winCommand=<null>,tester=<null>,readOutput=true,installationDirective=You need to install ccextractor.,installErrorMessage=<null>,timeout=<null>]). You need to install ccextractor.)
+2025-09-30T12:06:40,652 WARN  [main] [org.nuxeo.elasticsearch.core.ElasticSearchEmbeddedNode] Elasticsearch embedded configuration is ONLY for testing purpose. You need to create a dedicated Elasticsearch cluster for production.
+2025-09-30T12:06:45,552 INFO  [main] [org.nuxeo.runtime.osgi.OSGiRuntimeService] Nuxeo Platform Started
+======================================================================
+= Component Loading Status: Pending: 0 / Missing: 0 / Unstarted: 0 / Total: 571
+======================================================================
+2025-09-30T12:36:31,789 INFO  [main] [org.nuxeo.osgi.application.loader.FrameworkLoader] 
+======================================================================
+= Starting Nuxeo Framework
+======================================================================
+  * Distribution Version = 10.10
+  * Distribution Date = 201901211253
+  * Server home = /opt/nuxeo/server
+  * Runtime home = /opt/nuxeo/server/nxserver
+  * Data Directory = /var/lib/nuxeo/data
+  * Log Directory = /var/log/nuxeo
+  * Configuration Directory = /opt/nuxeo/server/nxserver/config
+  * Temp Directory = /opt/nuxeo/server/tmp
+======================================================================
+2025-09-30T12:36:39,990 WARN  [main] [org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent] Command not available: videoClosedCaptionsExtractor (command ccextractor not found in system path (descriptor CommandLineDescriptor[name=videoClosedCaptionsExtractor,enabled=true,available=false,command=ccextractor,parameterString=#{sourceFilePath} -out=#{outFormat} -trim -o #{outFilePath},testParameterString=,winParameterString=<null>,winTestParameterString=,winCommand=<null>,tester=<null>,readOutput=true,installationDirective=You need to install ccextractor.,installErrorMessage=<null>,timeout=<null>]). You need to install ccextractor.)
+2025-09-30T12:36:39,997 WARN  [main] [org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent] Command not available: videoPartClosedCaptionsExtractor (command ccextractor not found in system path (descriptor CommandLineDescriptor[name=videoPartClosedCaptionsExtractor,enabled=true,available=false,command=ccextractor,parameterString=#{sourceFilePath} -out=#{outFormat} -startat #{startAt} -endat #{endAt} -trim -o #{outFilePath},testParameterString=,winParameterString=<null>,winTestParameterString=,winCommand=<null>,tester=<null>,readOutput=true,installationDirective=You need to install ccextractor.,installErrorMessage=<null>,timeout=<null>]). You need to install ccextractor.)
+2025-09-30T12:36:44,122 WARN  [main] [org.nuxeo.elasticsearch.core.ElasticSearchEmbeddedNode] Elasticsearch embedded configuration is ONLY for testing purpose. You need to create a dedicated Elasticsearch cluster for production.
+2025-09-30T12:36:48,249 INFO  [main] [org.nuxeo.runtime.osgi.OSGiRuntimeService] Nuxeo Platform Started
+======================================================================
+= Component Loading Status: Pending: 0 / Missing: 0 / Unstarted: 0 / Total: 792
+======================================================================
+2025-09-30T12:36:50,324 INFO  [main] [javax.enterprise.resource.webcontainer.jsf.application] jsf.core.injection.provider_generic_web_configured
+2025-09-30T13:09:56,692 WARN  [elasticsearch[nuxeoNode][scheduler][T#1]] [org.elasticsearch.monitor.jvm.JvmGcMonitorService] [gc][1663] overhead, spent [899ms] collecting in the last [1.5s]
