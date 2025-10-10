@@ -11,9 +11,28 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
     ports:
       - "2181:2181"
+    healthcheck:
+      test: ["CMD", "sh", "-c", "nc -z localhost 2181"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
     volumes:
       - zookeeper-data:/var/lib/zookeeper/data
       - zookeeper-logs:/var/lib/zookeeper/log
+    networks:
+      - nuxeo-network
+
+  # MongoDB
+  mongodb:
+    container_name: mongodb
+    image: mongo:4.0.18
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/var/lib/mongodb
+      - ./nuxeo/mongodb/db:/data/db:rw
     networks:
       - nuxeo-network
 
@@ -74,56 +93,103 @@ services:
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     ports:
       - "9200:9200"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9200/_cat/health?h=st || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
     volumes:
       - es-data:/usr/share/elasticsearch/data
     networks:
       - nuxeo-network
 
-  # Nuxeo main image
+  # MongoDB admin interface
+  mongo-express:
+    container_name: mongo-express
+    image: mongo-express:latest
+    restart: always
+    ports:
+      - "8082:8081"
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+      - ME_CONFIG_MONGODB_PORT=27017
+    depends_on:
+      - mongodb
+    networks:
+      - nuxeo-network
+
   nuxeo:
     container_name: nuxeo
-    image: nuxeo:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - DOCKER_REGISTRY_USER=${NUXEO_USER}
+        - DOCKER_REGISTRY_TOKEN=${NUXEO_TOKEN}
     restart: always
     depends_on:
-      - elasticsearch
-      - kafka
-      - zookeeper
+      elasticsearch:
+        condition: service_healthy
+      kafka:
+        condition: service_healthy
+      zookeeper:
+        condition: service_healthy
+      mongodb:
+        condition: service_started
     ports:
       - "8091:8080"
     environment:
+
       # General Config
-      NUXEO_URL: localhost
-      NUXEO_PACKAGES: nuxeo-web-ui nuxeo-platform-getting-started
+      NUXEO_URL: http://localhost:8091/nuxeo
       NUXEO_DATA: /var/lib/nuxeo/data
       NUXEO_LOG: /var/log/nuxeo
-      NUXEO_CLID: "bc6062de-7121-4cca-8b2b-8204be63cfa8.1760785134.ijGpSxSE3xZzn60uktp67xdkUfBc7gOBctrrVM80Ay/k+9oCHHitMfymE5zBmjHLhI3r5Fsgg/fxgHt3qBhP1HYPtO9dTwcNmcPX69fSLiWAMGA/Kgn7wmWPUy9UEpDDCOMZSvP2TrpStGgSyD20F0nZ4I3CgL/tEPe49y4CSiZzcFjykWDV8NJ6Eev3KI+77NXKJEsjLF6FE2Do4sdZC7pxA9dom4K1cAJUcfRftKtxLI32jJRZReuTbCR788pwLgY70DF49VoQ80wR/cZhiloM0Jgm3qtVkbJazoD1GEkDjFI3qLa6KX9VichBleB+SZxjX+wThNDkpwPvgX3F4g==--88597e06-34e5-4476-bc28-af3424babb9e"
-      NUXEO_DEV: "true"
-      NUXEO_TEMPLATES: "default"
-      NUXEO_DB_NAME: "nuxeo"
-      NUXEO_DB_USER: "nuxeo"
-      NUXEO_DB_PASSWORD: "nuxeo"
+      NUXEO_DEV_MODE: "true"
+      NUXEO_CLID : "bc6062de-7121-4cca-8b2b-8204be63cfa8.1760785134.ijGpSxSE3xZzn60uktp67xdkUfBc7gOBctrrVM80Ay/k+9oCHHitMfymE5zBmjHLhI3r5Fsgg/fxgHt3qBhP1HYPtO9dTwcNmcPX69fSLiWAMGA/Kgn7wmWPUy9UEpDDCOMZSvP2TrpStGgSyD20F0nZ4I3CgL/tEPe49y4CSiZzcFjykWDV8NJ6Eev3KI+77NXKJEsjLF6FE2Do4sdZC7pxA9dom4K1cAJUcfRftKtxLI32jJRZReuTbCR788pwLgY70DF49VoQ80wR/cZhiloM0Jgm3qtVkbJazoD1GEkDjFI3qLa6KX9VichBleB+SZxjX+wThNDkpwPvgX3F4g==--88597e06-34e5-4476-bc28-af3424babb9e"
+      NUXEO_HOME : /opt/nuxeo/server
+      # MongoDB Configuration
+      NUXEO_DB_NAME: nuxeo
+      NUXEO_DB_USER: nuxeo
+      NUXEO_DB_PASSWORD: nuxeo
+      NUXEO_DDL_MODE: create
+      NUXEO_INSTALL_HOTFIX: "false"
 
-      # Kafka Configuration
-      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
-      NUXEO_STREAM_KAFKA_ENABLED: "true"
-      KAFKA_ENABLED: "true"
+
 
       # Elasticsearch Configuration
+
       ELASTICSEARCH_ADDRESS: http://elasticsearch:9200
       ELASTICSEARCH_CLUSTER_NAME: elasticsearch
       ELASTICSEARCH_INDEX_NAME: nuxeo
 
-      # Stream configuration via env vars
+     # Stream configuration via env vars
+
       NUXEO_STREAM_WORK_ENABLED: "true"
       NUXEO_STREAM_AUDIT_ENABLED: "true"
       NUXEO_STREAM_PUBSUB_ENABLED: "true"
+      # Elasticsearch Configuration
+#      NUXEO_ES_HOSTS: elasticsearch:9200
+#      NUXEO_ES_CLUSTER_NAME: elasticsearch
+#      NUXEO_ES_INDEX_NAME: nuxeo
+
+      NUXEO_ES_REPLICAS: 0
+      NUXEO_ES_SHARDS: 1
+      NUXEO_AUDIT_ES_ENABLED: "true"
+      NUXEO_ES_HTTP_ENABLED: "true"
+      NUXEO_PACKAGES:  /opt/nuxeo/packages/2025-charul.thacker.auditeur@lecnam.net.zip
+
+      # Binary store
+      NUXEO_BINARY_STORE: /var/lib/nuxeo/binaries
+      
+      # Automation trace
+      NUXEO_AUTOMATION_TRACE: "false"
+
     volumes:
-      # Mount for development - hot reload
-      # - ./custom-bundles:/opt/nuxeo/server/nxserver/bundles:ro
       - ./logs:/var/log/nuxeo
-      # Removed nuxeo.conf mount - using environment variables instead
       - nuxeo-data:/var/lib/nuxeo/data
-      # - ./nuxeo/packages:/opt/nuxeo/server/packages/store
+      - ./nuxeo/binaries:/var/lib/nuxeo/binaries
+      - ./packages:/opt/nuxeo/packages
     networks:
       - nuxeo-network
 
@@ -138,6 +204,8 @@ volumes:
   es-data:
     driver: local
   nuxeo-data:
+    driver: local
+  mongodb-data:
     driver: local
 
 # Network for inter-container communication
