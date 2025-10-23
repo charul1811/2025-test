@@ -1,4 +1,6 @@
 Nuxeo 10.10 Docker Setup
+
+
 A Docker-based setup for running Nuxeo 10.10 platform with supporting services including Kafka, Elasticsearch, and MongoDB.
 Overview
 This project provides a containerized environment for Nuxeo 10.10 with all necessary infrastructure components. It uses Docker Compose to orchestrate multiple services and includes custom Nuxeo packages.
